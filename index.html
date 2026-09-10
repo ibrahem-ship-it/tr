@@ -164,20 +164,20 @@
                 <!-- KPI Metric Cards Grid -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-700/80">
                     <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 text-center">
-                        <span class="text-xs text-slate-400 font-medium block mb-1">الميزانية الإجمالية التقديرية</span>
+                        <span class="text-xs text-slate-400 font-medium block mb-1">الميزانية (النموذج الأولي)</span>
                         <span class="text-xl sm:text-2xl font-black text-brand-400 tracking-tight">15,195 <span class="text-xs font-semibold text-slate-300">ج.م</span></span>
                     </div>
                     <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 text-center">
+                        <span class="text-xs text-slate-400 font-medium block mb-1">الميزانية (المنتج النهائي)</span>
+                        <span class="text-xl sm:text-2xl font-black text-amber-400 tracking-tight">75,600 <span class="text-xs font-semibold text-slate-300">ج.م</span></span>
+                    </div>
+                    <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 text-center hidden md:block">
                         <span class="text-xs text-slate-400 font-medium block mb-1">مراحل العمل الرئيسية</span>
-                        <span class="text-xl sm:text-2xl font-black text-water-400 tracking-tight">4 مراحل</span>
+                        <span class="text-xl sm:text-2xl font-black text-water-400 tracking-tight">5 مراحل</span>
                     </div>
-                    <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 text-center">
-                        <span class="text-xs text-slate-400 font-medium block mb-1">مراحل الفلترة والتنقية</span>
-                        <span class="text-xl sm:text-2xl font-black text-emerald-400 tracking-tight">3 مراحل</span>
-                    </div>
-                    <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 text-center">
+                    <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 text-center hidden md:block">
                         <span class="text-xs text-slate-400 font-medium block mb-1">نمط المراقبة والتحكم</span>
-                        <span class="text-xl sm:text-2xl font-black text-amber-400 tracking-tight">لحظي سحابي</span>
+                        <span class="text-xl sm:text-2xl font-black text-emerald-400 tracking-tight">مساعد صوتي ذكي</span>
                     </div>
                 </div>
             </div>
@@ -209,6 +209,9 @@
                     </button>
                     <button onclick="switchPhase(4)" id="phaseBtn-4" class="phase-tab py-3 px-3 rounded-xl font-medium text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition">
                         المرحلة الرابعة: الواجهات
+                    </button>
+                    <button onclick="switchPhase(5)" id="phaseBtn-5" class="phase-tab py-3 px-3 rounded-xl font-medium text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition col-span-2 md:col-span-1 border border-brand-200 bg-brand-50 hover:bg-brand-100">
+                        المنتج النهائي (الذكي)
                     </button>
                 </div>
 
@@ -324,6 +327,40 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="phasePanel-5" class="phase-panel hidden bg-slate-50 border border-brand-200 rounded-2xl p-6 transition shadow-inner">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-md">
+                            05
+                        </div>
+                        <div class="space-y-3">
+                            <div class="inline-block px-3 py-1 bg-brand-100 text-brand-800 rounded-full text-xs font-bold mb-1">المنتج التجاري النهائي</div>
+                            <h3 class="text-lg font-bold text-slate-900">المرحلة الخامسة: تحويل المشروع إلى منتج "منزل ذكي" متكامل</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                تهدف هذه المرحلة إلى استبدال البنية التحتية الأولية بأجهزة ذكية متطورة (Plug-and-Play) تعتمد على بروتوكول الشبكات اللاسلكية المتداخلة (Mesh Network) لضمان استقرار الاتصال، مع الدمج الكامل بنظام المساعد الصوتي الذكي.
+                            </p>
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    <b>المركز الذكي والاستشعار الشامل:</b> تركيب وحدة تحكم مركزية متطورة، ومستشعر بيئي متكامل (7 في 1) يعمل بالطاقة المتجددة لقياس جودة المياه بدقة احترافية.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    <b>المحابس والمشغلات الآلية:</b> الاعتماد على مفاتيح تحكم ذكية دقيقة (Smart Relays) ومحابس مياه آلية تتدخل فوراً لإيقاف التدفق عند اكتشاف الخطر.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    <b>الأوامر الصوتية والروتين الآلي:</b> دمج النظام مع المساعد الصوتي لإنشاء إجراءات روتينية (مثلاً: "إذا ارتفعت نسبة الأملاح بشكل حرج، أوقف المضخة وأرسل تنبيهاً صوتياً فورياً").
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>
+                                    <b>الأمان المتقدم:</b> إضافة مستشعرات استباقية لتسرب المياه لحماية الموقع من الغرق، مع ترقية الهيكل لأكريليك ومواد صناعية مقاومة للعوامل الجوية.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -488,9 +525,13 @@
                             <span>💰</span> عرض السعر المالي
                         </div>
                         <h2 class="text-xl sm:text-2xl font-bold text-slate-900">الميزانية التقديرية للمكونات المادية</h2>
-                        <p class="text-slate-600 text-sm mt-1">
-                            تغطي هذه الميزانية التكلفة المقدرة لتوريد وتركيب كافة المكونات المادية المخصصة لبناء وتجهيز النموذج الأولي.
+                        <p class="text-slate-600 text-sm mt-1 mb-4">
+                            تغطي هذه الميزانية التكلفة المقدرة لتوريد وتركيب كافة المكونات المادية. يمكنك التبديل بين ميزانية النموذج الأولي والمنتج النهائي الذكي.
                         </p>
+                        <div class="flex bg-slate-100 p-1 rounded-xl w-fit">
+                            <button onclick="toggleBudgetType('prototype')" id="btn-budget-proto" class="px-4 py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm transition">النموذج الأولي</button>
+                            <button onclick="toggleBudgetType('final')" id="btn-budget-final" class="px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 transition">المنتج النهائي الذكي</button>
+                        </div>
                     </div>
                     <div class="bg-brand-50 border border-brand-200/80 rounded-2xl p-4 text-center min-w-[200px]">
                         <span class="text-xs font-bold text-brand-800 block">إجمالي التكلفة التقديرية</span>
@@ -548,7 +589,7 @@
                         </tbody>
                         <tfoot class="bg-slate-100 font-bold text-slate-900 border-t-2 border-slate-300">
                             <tr>
-                                <td colspan="4" class="p-4 text-right font-extrabold text-sm sm:text-base">إجمالي تكلفة توريد المكونات المادية للنموذج الأولي</td>
+                                <td colspan="4" class="p-4 text-right font-extrabold text-sm sm:text-base">إجمالي تكلفة المكونات للنموذج الأولي</td>
                                 <td id="calculatedTotal" class="p-4 text-left font-black text-brand-700 text-sm sm:text-base">15,195 ج.م</td>
                             </tr>
                         </tfoot>
@@ -559,7 +600,10 @@
                 <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-start gap-3">
                     <span class="text-amber-600 text-xl">💡</span>
                     <p class="text-xs sm:text-sm text-amber-900 leading-relaxed">
-                        <b>ملاحظة هامة للعميل:</b> هذه الميزانية تغطي كافة تكاليف توريد وتجهيز المكونات المادية وعتاد الهاردوير (Hardware) المطلوبة لتنفيذ وتشغيل النموذج الأولي حسب معايير الكفاءة والتشغيل القياسية.
+                        <b>ملاحظات هامة للعميل حول المنتج النهائي:</b><br> 
+                        - تم احتساب جميع الأسعار بضرب التكلفة التقديرية الأساسية في <b>3 أضعاف</b> لتغطية الأرباح، الشحن، التخليص الجمركي، وخدمات البرمجة والتركيب والتكامل مع أنظمة المساعدات الصوتية.<br>
+                        - تم تضمين تكاليف إضافية حيوية للمنتج النهائي مثل (الهيكل الصناعي المتين، محابس التحكم الآلي في المياه، مستشعرات التسريب، وبطاريات الطوارئ) لضمان منتج تجاري احترافي 100%.<br>
+                        - المكونات الذكية المستخدمة لا تتطلب خوادم خاصة بك، بل تعتمد على البيئات السحابية الآمنة المتوفرة عبر أجهزة التوصيل والتشغيل (Plug-and-Play) مما يوفر تكاليف الصيانة البرمجية المستقبلية.
                     </p>
                 </div>
 
@@ -595,6 +639,20 @@
             { id: 13, name: "وسائط المعالجة الحيوية", desc: "بذور ترويق طبيعية ومستعمرات حيوية لمعالجة المياه عضوياً", category: "FILTRATION", categoryName: "وسائط الفلترة", price: 630 }
         ];
 
+        const finalBudgetData = [
+            { id: 14, name: "وحدة تحكم مركزية لاسلكية (Smart Hub)", desc: "العقل المدبر لربط الأجهزة الذكية بالإنترنت والمساعد الصوتي", category: "CONTROL", categoryName: "التحكم والطاقة", price: 8700 },
+            { id: 15, name: "نظام استشعار متكامل (7 في 1)", desc: "مستشعر لاسلكي بالطاقة المتجددة لقياس جودة المياه الشاملة", category: "SENSORS", categoryName: "أجهزة الاستشعار", price: 25500 },
+            { id: 16, name: "بوابة اتصال مخصصة للمستشعر", desc: "جسر ربط لضمان توافق المستشعر المتقدم مع بيئة العمل المركزية", category: "CONTROL", categoryName: "التحكم والطاقة", price: 3000 },
+            { id: 17, name: "مفتاح تحكم ذكي دقيق (Smart Relay)", desc: "مرحل ذكي لاستقبال الأوامر لتشغيل أو إيقاف مضخة المياه آلياً", category: "CONTROL", categoryName: "التحكم والطاقة", price: 3300 },
+            { id: 18, name: "محبس مياه آلي ذكي", desc: "محرك للتحكم في فتح وإغلاق مسار المياه أوتوماتيكياً عبر الروتين", category: "HARDWARE", categoryName: "الهيكل والميكانيكا", price: 6900 },
+            { id: 19, name: "مستشعر استباقي لتسرب المياه", desc: "مراقبة أرضية الخزانات والأنابيب لمنع أضرار التسريب والغرق", category: "SENSORS", categoryName: "أجهزة الاستشعار", price: 2700 },
+            { id: 20, name: "هيكل صناعي وتغليف نهائي (IP68)", desc: "ترقية الهيكل من أكريليك أولي إلى مواد صناعية مقاومة للعوامل البيئية", category: "HARDWARE", categoryName: "الهيكل والميكانيكا", price: 9000 },
+            { id: 21, name: "وحدة طاقة وبطارية احتياطية", desc: "نظام UPS لضمان استمرار عمل المستشعرات والمحابس عند انقطاع الكهرباء", category: "CONTROL", categoryName: "التحكم والطاقة", price: 4500 },
+            { id: 22, name: "فلاتر ووسائط معالجة معتمدة", desc: "وسائط حيوية ونانوية محسنة ومجهزة للاستخدام التجاري المستمر", category: "FILTRATION", categoryName: "وسائط الفلترة", price: 6000 },
+            { id: 23, name: "البرمجة والمعايرة والتكامل الصوتي", desc: "برمجة الإجراءات الروتينية، المعايرة الكيميائية، والربط بالمساعد الصوتي", category: "SOFTWARE", categoryName: "البرمجيات والتركيب", price: 6000 }
+        ];
+
+        let currentActiveBudget = budgetData;
         let categoryChartObj = null;
         let barChartObj = null;
 
@@ -622,8 +680,12 @@
                 });
             }
 
+            const titleText = currentActiveBudget === budgetData ? "إجمالي تكلفة المكونات للنموذج الأولي" : "إجمالي تكلفة المنتج النهائي الذكي";
             document.getElementById('calculatedTotal').innerText = `${total.toLocaleString('ar-EG')} ج.م`;
             document.getElementById('grandTotal').innerText = `${total.toLocaleString('ar-EG')} ج.م`;
+            
+            const tfootTitle = document.querySelector('tfoot tr td:first-child');
+            if(tfootTitle) tfootTitle.innerText = titleText;
         }
 
         // Filter and Search Logic
@@ -631,13 +693,35 @@
             const cat = document.getElementById('categoryFilter').value;
             const query = document.getElementById('searchInput').value.toLowerCase().trim();
 
-            const filtered = budgetData.filter(item => {
-                const matchCategory = (cat === 'ALL' || item.category === cat);
+            const filtered = currentActiveBudget.filter(item => {
+                const matchCategory = (cat === 'ALL' || item.category === cat || item.category === "SOFTWARE"); // allow software to show
                 const matchQuery = (item.name.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query));
                 return matchCategory && matchQuery;
             });
 
             renderBudgetTable(filtered);
+        }
+
+        function toggleBudgetType(type) {
+            const btnProto = document.getElementById('btn-budget-proto');
+            const btnFinal = document.getElementById('btn-budget-final');
+
+            if(type === 'prototype') {
+                currentActiveBudget = budgetData;
+                btnProto.className = "px-4 py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm transition";
+                btnFinal.className = "px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 transition";
+            } else {
+                currentActiveBudget = finalBudgetData;
+                btnFinal.className = "px-4 py-2 rounded-lg text-sm font-bold bg-white text-brand-700 shadow-sm transition";
+                btnProto.className = "px-4 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 transition";
+            }
+            
+            // Reset filters
+            document.getElementById('categoryFilter').value = 'ALL';
+            document.getElementById('searchInput').value = '';
+            
+            filterBudgetTable();
+            initCharts(); // Redraw charts with new data
         }
 
         // Phase Tab Switcher
@@ -679,12 +763,24 @@
                 "أجهزة الاستشعار": 0,
                 "التحكم والطاقة": 0,
                 "الهيكل والميكانيكا": 0,
-                "وسائط الفلترة": 0
+                "وسائط الفلترة": 0,
+                "البرمجيات والتركيب": 0
             };
 
-            budgetData.forEach(item => {
-                categories[item.categoryName] += item.price;
+            currentActiveBudget.forEach(item => {
+                if(categories[item.categoryName] !== undefined) {
+                    categories[item.categoryName] += item.price;
+                }
             });
+
+            // Clean empty categories for cleaner charts
+            Object.keys(categories).forEach(key => {
+                if(categories[key] === 0) delete categories[key];
+            });
+
+            // Destroy existing charts if they exist
+            if(categoryChartObj) categoryChartObj.destroy();
+            if(barChartObj) barChartObj.destroy();
 
             // Doughnut Chart
             const ctxDoughnut = document.getElementById('budgetCategoryChart').getContext('2d');
@@ -694,7 +790,7 @@
                     labels: Object.keys(categories),
                     datasets: [{
                         data: Object.values(categories),
-                        backgroundColor: ['#059669', '#0ea5e9', '#64748b', '#f59e0b'],
+                        backgroundColor: ['#059669', '#0ea5e9', '#64748b', '#f59e0b', '#8b5cf6'],
                         borderWidth: 2,
                         borderColor: '#ffffff'
                     }]
@@ -723,7 +819,7 @@
 
             // Top Items Bar Chart
             const ctxBar = document.getElementById('budgetBarChart').getContext('2d');
-            const topItems = [...budgetData].sort((a, b) => b.price - a.price).slice(0, 6);
+            const topItems = [...currentActiveBudget].sort((a, b) => b.price - a.price).slice(0, 6);
 
             barChartObj = new Chart(ctxBar, {
                 type: 'bar',
